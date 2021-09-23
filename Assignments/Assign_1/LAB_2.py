@@ -1,3 +1,17 @@
+#CS 101 Lab
+#Program #2
+#Jonathan Garcia Sanchez 
+#jggfh@umsystem.edu
+##
+#Calculate the weight grade for Lab course depending on the grade in each category given
+#1. start 
+#2. assign an input for name of person who's grade is being calculated
+#3. assign integer input for the grade of labs themselves
+#4. make an if elif statement in case lab grade is over 100 to be 100 or less than 0 to be 0 
+#5. reapt steps 3 and 4 for exam grade and attendance grade 
+#6. calculate  weighted grade by multiplying lab grade by 0.7, exam by 0.2, and attendance by 0.1
+#7. make if elif statement based on weight grade to determine what letter grade they have 
+#8. end
 print('*** Welcome to the LAB grade calculator! ***')
 name = input('Who are we calculating grades for? ==>')
 print() 
