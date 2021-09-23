@@ -38,6 +38,7 @@ if att_grade > 100:
 elif att_grade < 0:
     att_grade = int(0)
     print('The lab value should be zero or greater.  It has been changed to zero')
+print()
 
 weight_grade = (lab_grade * 0.7) + (exam_grade * 0.2) + (att_grade * 0.1)
 print('The weighted grade for', name, 'is', weight_grade)
