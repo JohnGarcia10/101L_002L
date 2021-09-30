@@ -13,8 +13,7 @@
 #8. Set up for loop for numbers in range or 1-101, then have an if inside for a number i to equal mod of 3, 5, 7
 #9. print i as the number they were thinking of 
 #10. have a while for anything true like 1  being greater than 0 then ask for input if user wants to play again
-#11. Set if  inside  after if  the input is y, Y, n, N then break 
-
+#11. Set if  inside  after if  the input is y, Y, n, N then break
 print('Weclome to the Flarsheim Guesser!')
 print()
 
@@ -23,7 +22,6 @@ while play == 'y' or play == 'Y':
     print('Please think of a number between and including 1 and 100.')
     print()
     num3 = int(input('What is the remainder when you number is divided by 3?'))
-    print()
     while num3 >= 3 or num3 < 0:
         if num3 >= 3:
             print('The value entered must be less than 3')
@@ -31,15 +29,18 @@ while play == 'y' or play == 'Y':
         elif num3 <= 0:
             print('The value you entered must be 0 or greater')
             num3 =  int(input('What is the reaminder  when your number is divided by 3?'))
+    print()
     num_5 = int(input('What is the remainder of your number when divided by 5?'))
     print()
     while num_5 > 5 or num_5 < 0:
         if num_5 >= 5:
             print('The value you entered must be less than 5')
             num_5 = int(input('What is the remainder of your number when divided by 5?'))
+            print()
         elif num_5 <= 0:
             print('The value you entered must be 0 or greater')
             num_5 = int(input('What is the remainder of your number when divided by 5?'))
+            print()
     num_7 = int(input('What is the remainder of your number when divided by 7?'))
     while num_7 > 7 or num_7 < 0:
         if num_7 >= 7:
@@ -54,6 +55,6 @@ while play == 'y' or play == 'Y':
             print('How amazing was that?')
     print()
     while 1 > 0:
-        play = input('Do you want  to play again? (y/n)')
+        play = input('Do you want  to play again? Y to continue, N to quit ==>')
         if play == 'Y' or play == 'y' or play == 'n' or play == 'N':
             break
