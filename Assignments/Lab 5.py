@@ -54,12 +54,9 @@ def get_wager(bank : int) -> int:
             print('The wager amount cannot be greater than how much you have.', bank)
             start_chips = int(input('How many chips do you want to wager? ==>'))
 
-
-
 def get_slot_results() ->  tuple:
     '''Returns the result of the slot pull'''
     return random.randint(1,10), random.randint(1,10), random.randint(1,10)
-
 
 def get_matches(reela, reelb, reelc) -> int:
     '''Returns 3 for all 3 match, 2 for alike, and 0 for none alike'''
@@ -81,9 +78,6 @@ def get_bank() ->  int:
             print('Too low a value, you can only choose 1 - 100 chips'.format(chips))
         elif chips > 101:
             print('Too high a value, you can only choose 1 - 100 chips'.format(chips))
-
-
-
 
 
 def get_payout(wager, matches):
