@@ -1,58 +1,60 @@
-'''1- Write a function that takes a list and returns a new list
-with unique elements of the first list.
-e.g: [1,2,3,1,4,3,2,6,8,6] -->[1, 2, 3, 4, 6, 8] Do not use sets'''
+'''Example 1:Define class Employee with two instance attributes wage
+and hours_worked and set each to 0.
+Also define calculate_pay method.The method should return the amount
+to pay the employee, by multiplying the employee's wage and number of hours
+worked. '''
 
-def unique(list):
-     new_list = []
-     for i in list:
-          if i not in new_list:
-               new_list.append(i)
-          else:
-               continue
-     return new_list
+'''class Employee:
+     def __init__(self,wage = 0, hours_worked = 0):
+          self.wage = wage
+          self.hours = hours_worked
+     
+     def calculate_pay(self):
+          pay = wage * hours_worked
+          return pay
+wage = int(input('Enter your wage: '))
+hours_worked = int(input('Enter your hours worked: '))
 
-lst = [1,2,3,1,4,3,2,6,7,6]
-print(unique(lst))
+work = Employee(wage,hours_worked)
+print(Employee.calculate_pay(work))'''
 
-'''2- Write program to create a dictionary from two given lists:'''
-class_list = ['CS201', 'CS101', 'CS191', 'IT222']
-id_list = [1, 2, 2, 3]
+'''Example 1:Overloaded operators
+Define class Point that will have two instance attributes x and y.
+Set default values for both to 0. Add necessary methods to add two objects
+of class,also method to print all details about object of class'''
 
-new_dict = dict(zip(class_list,id_list))
-print(new_dict)
+class Point:
+     def __init__(self,x=0,y=0):
+          self.x = x
+          self.y = y
+     def __add__(self,other):
+          sumx = self.x + other.x
+          sumy = self.y + other.y
+          return Point(sumx,sumy)
+     def __str__(self):
+          return 'Values are {} {}'.format(self.x,self.y)
+     def get_x(self):
+          return self.x
 
-'''3- Given n=range(-5,5), by using filter(fun,seq) save all negative numbers
-in n to a list'''
+p1 = Point(10,20)
+p2 = Point(20,30)
+p3 = p1 + p2
+print(p3)
+print(p1.get_x())
 
-new_list = list(filter(lambda i:i<0, range(-5,5)))
-print(new_list)
+'''Example 2: Overloaded operators
+Define class Circle that will include constructor with instance attribute
+radius with default value 0, getter(return value), setter( set some values)
+and area method to output area of circle.
+Also include overloaded operator <,> to compare two objects of the class.'''
 
-'''4- By using py_dict, write program to save key:value in new dictionary
-without having duplicates for values '''
-'''py_dict={'a':10,'b':20,'c':10,'d':30,'e':20}'''
-#output: new = {'a':10,'b':20,'d':30}
-
-py_dict={'a':10,'b':20,'c':10,'d':30,'e':20}
-new_d = {}
-for k,v in py_dict.items():
-     if v not in new_d.values():
-          new_d[k] = v
-     else:
-          continue
-print(new_d)
-
-'''5- Write program to declare a set with values from 0 to 5
-and delete the value 4 if exist in set'''
-
-new  = set(range(0,6))
-print(new)
-
-new_s = set(filter(lambda x: x != 4, new))
-
-print(new_s)
-
-lst  = [1,2,3,4,5,6]
-for i in range(1,6):
-     lst[i-1] = lst[i]
-for i in range(0,6):
-     print(lst[i], end=' ')
+class Circle:
+     def __init__(self, radius = 0):
+          self.r = radius
+     def set_v(self,other):
+          self.r = other
+     def get_value(self,other):
+          return self.r
+     def __lt__(self,other):
+          return self.r < other.r
+          
